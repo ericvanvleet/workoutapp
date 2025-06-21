@@ -1,5 +1,6 @@
 import http
 from common.errors import *
+import urllib
 
 class Handler(http.server.SimpleHTTPRequestHandler):
     # def do_GET(self):
@@ -18,3 +19,8 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         if len(parameters[name]) != 1:
             raise ValidationError(f'more than 1 {name} found.')
         return parameters[name][0]
+    
+    def not_found(self):
+        self.send_response(http.HTTPStatus.NOT_FOUND)
+        self.end_headers()
+        self.wfile.write('path not found'.encode("utf-8"))

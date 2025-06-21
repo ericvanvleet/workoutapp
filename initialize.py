@@ -18,9 +18,9 @@ conn.execute("""
     create table challenge(
         id varchar(36) primary key,
         start_date varchar(10) not null,
-        end_date varchar(10) not null,
-        organizer varchar(36),
-        FOREIGN KEY(organizer) REFERENCES user(id) 
+        end_date varchar(10) not null
+        --organizer varchar(36),
+        --FOREIGN KEY(organizer) REFERENCES user(id) 
     )
 """)
 
