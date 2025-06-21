@@ -22,6 +22,9 @@ class Challenge:
             """, 
             (self.get_id(), self.get_start_date(), self.get_end_date())
         )
+        conn.commit()
+        conn.close()
+        
     def get_id(self):
         return str(self.id)
 
