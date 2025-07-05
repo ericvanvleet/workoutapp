@@ -11,6 +11,8 @@ class MainHandler(Handler):
         path = self.path.split('?')[0]
         if path == '/create_challenge':
             controllers.challenge.create(self)
+        elif path == '/list_challenges':
+            controllers.challenge.list(self)
         else:
             self.not_found()
        

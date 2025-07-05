@@ -1,0 +1,22 @@
+<html>
+    <body>
+    <table>
+        <thead>
+            <tr>
+                <td>id</td>
+                <td>start date</td>
+                <td>end date</td>
+            </tr>
+        </thead>
+        <tbody>
+            {{#challenges}}
+            <tr>
+                <td>{{id}}</td>
+                <td>{{get_start_date}}</td>
+                <td>{{get_end_date}}</td>
+            </tr>
+            {{/challenges}}
+        </tbody>
+    </table>
+    </body>
+</html>
